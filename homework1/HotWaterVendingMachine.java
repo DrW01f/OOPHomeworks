@@ -19,7 +19,13 @@ public class HotWaterVendingMachine implements VendingMachine{
 
     @Override
     public Product getProduct() {
-        return productList.pop();
+        if (productList.size() > 1) {  
+            return productList.pop();
+        }
+        else {
+            System.out.println("Автомат пуст");
+            return null;
+        }
     }
 
     @Override
@@ -28,19 +34,30 @@ public class HotWaterVendingMachine implements VendingMachine{
     }
 
 
-    public Product getProduct(String name, int volume, int temperature){
-        if (productList.size() > 1) {
+    public Product getProduct(String name, int price, int temperature){
+        if (productList.size() > 1) {            
             for (int i = 0; i < productList.size(); i++) {
                 Product product = productList.get(i);
-                if (product.getName().equals(name) && ((HotDrinks) product).getTemp() == temperature) {
+                if (product.getName().equals(name) && product.getPrice() == price &&((HotDrinks) product).getTemp() == temperature) {
                     return productList.remove(i);
                 }
             }
         }       
-        System.out.println("Нет продуктов в автомате");
-        return null;       
+        else {
+            System.out.println("Нет продуктов в автомате");
+            return null;
+        }       
     }
 
-       
+    public void showProducts(){
+        if (productList.size() > 1) {
+            System.out.println("В автомате находятся следующие напитки: ");
+            for (Product product : productList) {
+                System.out.println(product);
+            }
+        }
+        else {System.out.println("Автомат пуст");}
+    }
+
     }
 

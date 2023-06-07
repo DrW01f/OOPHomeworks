@@ -17,16 +17,34 @@ public class Main {
         HotDrinks greenTea = new HotDrinks("зеленый чай", 55, 65);
         HotDrinks mulledWine = new HotDrinks("глинтвейн", 200, 85);
         HotDrinks blackTeaLemon = new HotDrinks("черный чай с лимоном", 60, 80);
-        HotDrinks cola = new HotDrinks("виски с колой", 180, 40);
+        HotDrinks colaWhiski = new HotDrinks("виски с колой", 180, 40);
 
 
-        System.out.println(coffe);
-        
-        
+        HotWaterVendingMachine coffeMachine = new HotWaterVendingMachine();
+        HotWaterVendingMachine alcoholMachine = new HotWaterVendingMachine();
+        // System.out.println(coffe);
+        coffeMachine.showProducts();
 
-      
+        coffeMachine.putProduct(coffe);
+        coffeMachine.putProduct(blackTea);
+        coffeMachine.putProduct(greenTea);
+        coffeMachine.putProduct(blackTeaLemon);
+
+        coffeMachine.showProducts();
+
+        coffeMachine.getProduct();
+        coffeMachine.getProduct("зеленый чай",10, 40);
+        coffeMachine.getProduct("зеленый чай",55, 65);
+
+
+        // alcoholMachine.putProduct(irishCoffe);
+        // alcoholMachine.putProduct(mulledWine);
+        // alcoholMachine.putProduct(colaWhiski);
+
+        // alcoholMachine.showProducts();
+
+
+
     }
        
 }
-
-// В том и дело, что дальше просят создать  несколько ГорячихНапитков и ГорячихНапитковАвтомат, тогда не понятно зачем 
