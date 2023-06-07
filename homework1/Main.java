@@ -11,15 +11,20 @@ public class Main {
 
 
     public static void main(String[] args) {
-        HotDrinks coffe = new HotDrinks("coffe", 100, 80);
+        HotDrinks coffe = new HotDrinks("кофе", 100, 75);
+        HotDrinks blackTea = new HotDrinks("черный чай", 50, 80);
+        HotDrinks irishCoffe = new HotDrinks("ирландский кофе", 250, 40);
+        HotDrinks greenTea = new HotDrinks("зеленый чай", 55, 65);
+        HotDrinks mulledWine = new HotDrinks("глинтвейн", 200, 85);
+        HotDrinks blackTeaLemon = new HotDrinks("черный чай с лимоном", 60, 80);
+        HotDrinks cola = new HotDrinks("виски с колой", 180, 40);
+
 
         System.out.println(coffe);
-        Product apple = new Product("apple", 30);
-        Product lemon = new Product();
+        
+        
 
-        // Product sea = new Water("White sea", 10);
-        // (HotDrinks) sea 
-        // System.out.println((HotDrinks));
+      
     }
        
 }
