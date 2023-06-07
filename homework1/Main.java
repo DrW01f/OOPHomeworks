@@ -37,24 +37,24 @@ public class Main {
         System.out.println(coffeMachine.getProduct());
         System.out.println(coffeMachine.getProduct());
         System.out.println(coffeMachine.getProduct());
-        System.out.println("-------------");
+        // System.out.println("-------------");
         coffeMachine.showProducts();
-        System.out.println("-------------");
+        // System.out.println("-------------");
         alcoholMachine.showProducts();
-        System.out.println("-------------");
+        // System.out.println("-------------");
 
-        coffeMachine.getProduct("зеленый чай",10, 40);
-        coffeMachine.getProduct("зеленый чай",55, 65);
-
+        System.out.println(coffeMachine.getProduct("зеленый чай",10, 40));
+        System.out.println(coffeMachine.getProduct("зеленый чай",55, 65));
 
         alcoholMachine.putProduct(irishCoffe);
         alcoholMachine.putProduct(mulledWine);
         alcoholMachine.putProduct(colaWhiski);
 
+        System.out.println("Алкоголь");
+        System.out.println(alcoholMachine.getProduct());
+        System.out.println(alcoholMachine.getProduct("глинтвейн", 200, 85));
+        
         alcoholMachine.showProducts();
-
-
-
     }
        
 }

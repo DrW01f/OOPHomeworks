@@ -1,7 +1,5 @@
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.LinkedList;
-import java.util.List;
 
 public class HotWaterVendingMachine implements VendingMachine{
     
@@ -26,12 +24,6 @@ public class HotWaterVendingMachine implements VendingMachine{
         return null;   
     }
 
-    @Override
-    public void putManyProducts(ArrayList<Product> items){
-        productList.addAll(items);
-    }
-
-
     public Product getProduct(String name, int price, int temperature){
         if (productList.size() > 1) {            
             for (int i = 0; i < productList.size(); i++) {
@@ -41,8 +33,15 @@ public class HotWaterVendingMachine implements VendingMachine{
                 }
             }
         }
+        System.out.println("Автомат пуст");
         return null; //     
     }
+
+    @Override
+    public void putManyProducts(ArrayList<Product> items){
+        productList.addAll(items);
+    }
+ 
 
     public void showProducts(){
         if (productList.size() > 1) {
