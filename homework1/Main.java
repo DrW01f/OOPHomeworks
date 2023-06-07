@@ -31,17 +31,27 @@ public class Main {
         coffeMachine.putProduct(blackTeaLemon);
 
         coffeMachine.showProducts();
+        System.out.println("-------------");
+        System.out.println(coffeMachine.getProduct());
+        System.out.println("-------------");
+        System.out.println(coffeMachine.getProduct());
+        System.out.println(coffeMachine.getProduct());
+        System.out.println(coffeMachine.getProduct());
+        System.out.println("-------------");
+        coffeMachine.showProducts();
+        System.out.println("-------------");
+        alcoholMachine.showProducts();
+        System.out.println("-------------");
 
-        coffeMachine.getProduct();
         coffeMachine.getProduct("зеленый чай",10, 40);
         coffeMachine.getProduct("зеленый чай",55, 65);
 
 
-        // alcoholMachine.putProduct(irishCoffe);
-        // alcoholMachine.putProduct(mulledWine);
-        // alcoholMachine.putProduct(colaWhiski);
+        alcoholMachine.putProduct(irishCoffe);
+        alcoholMachine.putProduct(mulledWine);
+        alcoholMachine.putProduct(colaWhiski);
 
-        // alcoholMachine.showProducts();
+        alcoholMachine.showProducts();
 
 
 

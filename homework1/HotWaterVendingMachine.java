@@ -21,11 +21,9 @@ public class HotWaterVendingMachine implements VendingMachine{
     public Product getProduct() {
         if (productList.size() > 1) {  
             return productList.pop();
-        }
-        else {
-            System.out.println("Автомат пуст");
-            return null;
-        }
+        }        
+        System.out.println("Автомат пуст");
+        return null;   
     }
 
     @Override
@@ -42,11 +40,8 @@ public class HotWaterVendingMachine implements VendingMachine{
                     return productList.remove(i);
                 }
             }
-        }       
-        else {
-            System.out.println("Нет продуктов в автомате");
-            return null;
-        }       
+        }
+        return null; //     
     }
 
     public void showProducts(){
