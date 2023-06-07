@@ -7,7 +7,7 @@ public class HotDrinks extends Water {
         this.temperature = temperature;
     }
 
-    public int GetTemp(){
+    public int getTemp(){
         return temperature;
     }
 

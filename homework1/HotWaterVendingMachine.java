@@ -9,47 +9,38 @@ public class HotWaterVendingMachine implements VendingMachine{
     перегруженный метод getProduct(int name, int volume, int temperature), выдающий продукт 
     соответствующий имени, объёму и температуре*/
 
-    ArrayList<Product> hotDrinksList = new ArrayList();
-
-    @Override
-    public String getName(Product product){
-        return product.name;
-    }
-
-    @Override
-    public int getPrice(Product product){
-        return product.price;
-    }
-
-    @Override
+    
+    LinkedList<Product> productList = new LinkedList<>();
+    
+   @Override
     public void putProduct(Product product){
-        hotDrinksList.add(product);        
+        productList.add(product);        
     }
 
     @Override
-    public void putProductsList(List<Product> manyProduct){
-        hotDrinksList.addAll(manyProduct);
-    }
-    
-    @Override
-    public Product getProduct(){
-        return hotDrinksList.remove(hotDrinksList.size()-1);
+    public Product getProduct() {
+        return productList.pop();
     }
 
     @Override
-    public HotDrinks getProduct(String name, int price, int temperature){
-        HotDrinks drinks;
-            for (int i = 0; i < this.hotDrinksList.size(); i++) {
-                if (getName(hotDrinksList.get(i)) == name && getPrice(hotDrinksList.get(i)) == price)
-                {
-                    
+    public void putManyProducts(ArrayList<Product> items){
+        productList.addAll(items);
+    }
+
+
+    public Product getProduct(String name, int volume, int temperature){
+        if (productList.size() > 1) {
+            for (int i = 0; i < productList.size(); i++) {
+                Product product = productList.get(i);
+                if (product.getName().equals(name) && ((HotDrinks) product).getTemp() == temperature) {
+                    return productList.remove(i);
                 }
-        }
-    
+            }
+        }       
+        System.out.println("Нет продуктов в автомате");
+        return null;       
     }
 
-  
        
-    
-      
-}
+    }
+

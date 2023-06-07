@@ -14,7 +14,14 @@ public class Main {
         HotDrinks coffe = new HotDrinks("coffe", 100, 80);
 
         System.out.println(coffe);
+        Product apple = new Product("apple", 30);
+        Product lemon = new Product();
+
+        // Product sea = new Water("White sea", 10);
+        // (HotDrinks) sea 
+        // System.out.println((HotDrinks));
     }
        
 }
 
+// В том и дело, что дальше просят создать  несколько ГорячихНапитков и ГорячихНапитковАвтомат, тогда не понятно зачем 

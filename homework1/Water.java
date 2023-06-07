@@ -6,8 +6,7 @@ public class Water extends Product {
     }
 
     public Water(String name, int price) {
-        super.name = name;
-        super.price = price;
+        super(name, price);
     }
 
     @Override
