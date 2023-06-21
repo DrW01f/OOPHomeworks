@@ -2,7 +2,7 @@ package homework2;
 //Интерфейс с возможностями
 public interface Functions {
 
-    public double summ(double a, double b); //сложение 
+    public  double summ(double a, double b); //сложение 
 
     public double subtraction(double a, double b); //вычитание
     
