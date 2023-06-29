@@ -6,8 +6,8 @@ public abstract class Product {
     // getProduct(String name)
     
 
-    public String name;
-    public int price;
+    protected String name;
+    protected int price;
 
     public Product(String name, int price) {
         this.name = name;

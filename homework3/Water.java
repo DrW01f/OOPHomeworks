@@ -31,4 +31,12 @@ public class Water extends Product {
     public void setPrice(int price) {
         super.price = price;
     }
+
+    Water water = new Water(name, getPrice());
+
+   
+    // public int Comparable.compareTo(Water) {        
+    //     return this.getPrice()-w.getPrice();
+    // }
+    
 }

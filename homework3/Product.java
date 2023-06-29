@@ -1,4 +1,4 @@
-public abstract class Product {
+public abstract class Product implements Comparable<Product>{
     // Реализуйте класс Товар, содержащий данные о товаре, и ТорговыйАвтомат,
     // содержащий
     // в себе методы initProducts (List <Product>) сохраняющий в себе список
@@ -30,4 +30,7 @@ public abstract class Product {
         return price;
     }
 
+    public int compareTo(Product p){
+        return this.getPrice() - p.getPrice();
+    }
 }

@@ -1,3 +1,7 @@
+import java.util.Collection;
+import java.util.Collections;
+import java.util.List;
+
 public class Main {
  /*
  1  Создать наследника реализованного класса ГорячийНапиток с дополнительным полем 
@@ -24,13 +28,17 @@ public class Main {
         HotWaterVendingMachine alcoholMachine = new HotWaterVendingMachine();
         // System.out.println(coffe);
         coffeMachine.showProducts();
+   
 
         coffeMachine.putProduct(coffe);
         coffeMachine.putProduct(blackTea);
         coffeMachine.putProduct(greenTea);
         coffeMachine.putProduct(blackTeaLemon);
-
+        // System.out.println("++++");
+        // coffeMachine.sortPrice();
+        // System.out.println("++++");
         coffeMachine.showProducts();
+        
         System.out.println("-------------");
         System.out.println(coffeMachine.getProduct());
         System.out.println("-------------");

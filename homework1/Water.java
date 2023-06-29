@@ -5,7 +5,7 @@ public class Water extends Product {
         return super.name;
     }
 
-    public Water(String name, int price) {
+    public Water(String name, int price) { 
         super(name, price);
     }
 
@@ -31,4 +31,8 @@ public class Water extends Product {
     public void setPrice(int price) {
         super.price = price;
     }
-}
+
+}   
+
+
+  

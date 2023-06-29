@@ -1,24 +1,26 @@
 import java.util.ArrayList;
-import java.util.LinkedList;
+import java.util.List;
+import java.util.Collections;
 
 public class HotWaterVendingMachine implements VendingMachine{
     
     /*Создать класс ГорячихНапитковАвтомат реализующий интерфейс ТорговыйАвтомат и реализовать 
     перегруженный метод getProduct(int name, int volume, int temperature), выдающий продукт 
     соответствующий имени, объёму и температуре*/
-
     
-    LinkedList<Product> productList = new LinkedList<>();
+    List<Product> productList = new ArrayList<>();
+    
     
    @Override
     public void putProduct(Product product){
         productList.add(product);        
     }
 
+    
     @Override
     public Product getProduct() {
         if (productList.size() > 1) {  
-            return productList.pop();
+            return productList.remove(productList.size()-1);
         }        
         System.out.println("Автомат пуст");
         return null;   
@@ -52,6 +54,12 @@ public class HotWaterVendingMachine implements VendingMachine{
         }
         else {System.out.println("Автомат пуст");}
     }
+
+    public void sortPrice(){
+        Collections.sort(productList);
+    }
+
+   
 
     }
 
